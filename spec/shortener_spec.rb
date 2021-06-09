@@ -10,12 +10,20 @@ RSpec.describe Shortener do
   it "generates different short URL each time" do
     url = 'https://www.food.ee/restaurants/vancouver/blaze-gourmet-burgers'
     shortener = Shortener.new(url)
-    shortURL1 = shortener.getShortURL(url)
+    shortURL1 = shortener.getShortURL
 
     url = 'https://www.food.ee/restaurants/vancouver/brick-n-cheese'
     shortener = Shortener.new(url)
-    shortURL2 = shortener.getShortURL(url)
+    shortURL2 = shortener.getShortURL
 
     expect(shortURL1).not_to eq(shortURL2)
+  end
+
+
+  it "returns long url if provided short url" do
+    url = 'https://www.food.ee/restaurants/vancouver/blaze-gourmet-burgers'
+    shortener = Shortener.new(url)
+    result = shortener.getLongURL
+    expect(result.valid?).to be(true)
   end
 end

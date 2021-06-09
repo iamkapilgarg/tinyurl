@@ -3,9 +3,17 @@ class Shortener
   attr_reader :url
 
   def initialize(url)
+    @url = url
   end
 
   def getShortURL
-    "1234567"
+     loop do
+        code = SecureRandom.uuid[0..6];
+        break code unless Url.exists?(short_url: code)
+     end
+  end
+
+  def getLongURL
+    Url.create(long_url: url, short_url: getShortURL)
   end
 end 
