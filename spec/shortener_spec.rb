@@ -23,7 +23,7 @@ RSpec.describe Shortener do
   it "returns long url if provided short url" do
     url = 'https://www.food.ee/restaurants/vancouver/blaze-gourmet-burgers'
     shortener = Shortener.new(url)
-    result = shortener.getLongURL
+    result = shortener.generateShortUrl
     expect(result.valid?).to be(true)
   end
 end

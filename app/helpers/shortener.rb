@@ -13,7 +13,7 @@ class Shortener
      end
   end
 
-  def getLongURL
+  def generateShortUrl
     Url.create(long_url: url, short_url: getShortURL)
   end
 end 

@@ -6,7 +6,7 @@ RSpec.describe UrlsController, type: :controller do
     request.env["HTTP_ACCEPT"] = "text/javascript"
     post :create, params: {url: {long_url: longUrl}}
     url = assigns(:url)
-    expect(url.length).to eq(7)
+    expect(url.short_url.length).to eq(7)
     expect(response).to render_template('create')
   end
 end
