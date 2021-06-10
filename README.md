@@ -1,24 +1,36 @@
-# README
+# TinyURL
+This app creates a tiny url for a long url. The app is created in ruby on rails.
+Here are the technologies used:
+* Ruby on rails
+* postgresql
+* ERB
+* RSpec
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To clone this project, please run the following command
+```
+git@github.com:iamkapilgarg/tinyurl.git
+```
 
-Things you may want to cover:
+And then run bundle in your console
+```
+bundle
+```
 
-* Ruby version
 
-* System dependencies
+To migrate database, add your postgres credentials in config/database.yml and then run
+```
+rails db:migrate
+```
 
-* Configuration
+To run the project
+```
+rails s
+```
 
-* Database creation
+Here is the live demo of the project which is deployed on Heroku
+<a href="https://tinyurl-foodee.herokuapp.com/">TinyURL</a>
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
