@@ -11,7 +11,7 @@ class Url < ApplicationRecord
   end 
 
   def shortened_url
-    "#{ENV[HOST]}#{short_url}"
+    "https://tinyurl-foodee.herokuapp.com/#{short_url}"
   end
   
 end
