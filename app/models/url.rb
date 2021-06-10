@@ -11,7 +11,7 @@ class Url < ApplicationRecord
   end 
 
   def shortened_url
-    "http://localhost:3000/#{short_url}"
+    "#{ENV[HOST]}#{short_url}"
   end
   
 end
