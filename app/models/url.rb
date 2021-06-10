@@ -8,7 +8,11 @@ class Url < ApplicationRecord
     if uri.host.nil?
       errors.add(:long_url, "Invalid URL format")
     end
-  end  
+  end 
+
+  def shortened_url
+    "http://localhost:3000/#{short_url}"
+  end
   
 end
 
