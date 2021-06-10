@@ -34,8 +34,5 @@ module Tinyurl
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    Bundler.require(*Rails.groups)
-
-    Dotenv::Railtie.load
   end
 end
