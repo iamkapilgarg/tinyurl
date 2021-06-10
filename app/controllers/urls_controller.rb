@@ -1,7 +1,7 @@
 class UrlsController < ApplicationController
   def show
-    @url = Url.find_by(short_url: params[:id])
-    redirect_to @url.long_url
+    url = Url.find_by(short_url: params[:id])
+    redirect_to url.long_url
   end
 
 
