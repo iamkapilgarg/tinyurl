@@ -39,4 +39,12 @@ RSpec.describe Url do
     expect(url2.valid?).to be(false)
   end
 
+  it "is invalid if the long url is not formatted properly" do
+    url = Url.new(
+      long_url: "blaze-gourmet-burgers",
+      short_url: "1234567"
+    )
+    expect(url.valid?).to be(false)
+  end
+
 end
